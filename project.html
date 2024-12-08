@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="icon" type="image/x-icon" href="fire-emoji-for.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Jenson<span> Jose</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="about.html" target="_blank">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="skills.html">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="project.html">Projects</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="contact.html">Contact</a></div>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html" target="_blank">Home</a>
+                <a href="about.html" target="_blank">About</a>
+                <a href="skills.html" target="_blank">Skills</a>
+                <a href="project.html" target="_blank">Projects</a>
+                <a href="contact.html" target="_blank">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+        <div class="container" data-aos="zoom-out" data-aos-duration="3000">
+            <h1 style="color: white;">Audio to Sign Language Tool</h1>
+            <div class="slideshow-container" data-aos="zoom-out" data-aos-duration="3000">
+                <div class="slides">
+                    <img src="img1.jpg" alt="Slide 1" style="width: 400px;">
+                </div>
+                <div class="slides">
+                    <img src="img3.jpg" alt="Slide 2" style="width: 400px;">
+                </div>
+                <div class="slides">
+                    <img src="img4.jpg" alt="Slide 3" style="width: 400px;">
+                </div>
+    
+              
+            </div>
+            <div class="content" style="color: white;" data-aos="zoom-out" data-aos-duration="3000">
+                <p>
+                    In recent years, there has been a growing interest in developing technologies that bridge the communication gap between individuals who are deaf or hard of hearing and those who can hear. One such technology is the <strong>Audio to Sign Language Tool</strong>, which aims to translate spoken language into sign language gestures in real-time.
+                </p>
+                <p>
+                    This innovative solution can enhance communication and facilitate effective interaction between hearing and deaf individuals. The tool leverages machine learning and computer vision techniques to analyze spoken language and generate corresponding sign language gestures.
+                </p>
+                <p>
+                    <strong>Python</strong>, a popular programming language, provides a flexible and efficient platform for implementing this converter. By utilizing Python libraries and frameworks, we can create a robust and accurate system that recognizes and interprets spoken language to generate the appropriate sign language output.
+                </p>
+                <h2>Key Features:</h2>
+                <ul>
+                    <li>Speech Recognition</li>
+                    <li>Natural Language Processing (NLP)</li>
+                    <li>User Interface</li>
+                    <li>Tokenization and Lemmatization</li>
+                    <li>Speech API and NLP toolkit</li>
+                    <li>Sign Language Gesture Generation</li>
+                </ul>
+            </div>
+        </div>
+    
+        <script>
+            let slideIndex = 0;
+    
+            function showSlides() {
+                let slides = document.querySelectorAll(".slides");
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;
+                }
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 3000); // Change slide every 3 seconds
+            }
+    
+            function changeSlide(n) {
+                slideIndex += n;
+                let slides = document.querySelectorAll(".slides");
+                if (slideIndex > slides.length) slideIndex = 1;
+                if (slideIndex < 1) slideIndex = slides.length;
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[slideIndex - 1].style.display = "block";
+            }
+    
+            document.addEventListener("DOMContentLoaded", () => {
+                showSlides();
+            });
+        </script>
+    </nav>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+    <script src="script.js"></script
+</body>
+</html>
